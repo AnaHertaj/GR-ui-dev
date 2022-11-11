@@ -1,0 +1,52 @@
+@import 'base/normalize.scss';
+@import 'base/abstract.scss'; 
+@import 'base/variables.scss';            
+
+@import 'theme/typography.scss';     
+@import 'theme/header.scss';  
+@import 'theme/footer.scss'; 
+@import 'theme/layout.scss'; 
+@import 'theme/helpers.scss';  
+
+@import 'components/slick-theme.scss';    
+@import 'components/slick.scss'; 
+@import 'components/sliders.scss';   
+@import 'components/cards.scss';      
+ 
+ 
+body {     
+  font-size: 15px;  
+  /* cambio de referencia en los EM para pantallas grandes */
+  @media screen and (min-width: $break-point-xxl) { 
+    font-size: 20px;  
+  }
+}
+
+* {
+  font-family: $font-size-base;   
+  color: $black;
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+//resets
+ul { padding-left: 0;list-style-type: none; margin: 0;}
+li { margin: 0; }
+h1, h2, h3, h4 { font-weight: normal }
+p { line-height: 1.5; color: inherit}
+b { font-weight: normal}
+button { background: transparent; border: none }
+em { color: inherit;font-family: inherit;}
+h1, h2, h3, h4, h5, h6 {
+  a {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+  }
+}
+
+a:focus {
+    outline: 0;
+}
+

@@ -1,0 +1,79 @@
+
+.slider{
+    width:100%;
+    background: url("../assets/img/slider_base-degra.jpg") repeat;
+    background-size: contain;
+    &--img{
+        width:100%;
+        @media(min-width: $break-point-s) {
+            height:50vh;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    &--text{
+        position: absolute;
+        top: 20px;
+        margin-left: 20px;
+        width: 45vw;
+
+        @media(min-width: $break-point-xxs) { 
+            top: 10vh;
+            margin-left: 5vw;
+            width: 25vw;
+            transform: scale(1.55);
+            transform-origin: left;
+        }
+
+        @media(min-width: $break-point-s) {
+            top: 20vh;
+            margin-left: 10vw;
+            width: 20vw;
+        }
+
+        .title{ 
+            font-size: x-large;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+        .parraf{
+            width: 80%;
+        }
+        .marked{
+            background-color:$yellow;
+            display:block;
+            font-weight:700;
+            width: fit-content; 
+        }
+    }
+}
+.slick-dots li button:before{
+    font-size: 36px;
+}
+.slick-dots li.slick-active button:before{
+    color:$primary-blue;
+}
+.slick-dots li{
+    margin:0;
+}
+.slick-dots{
+    bottom: 10px;
+}
+.slick-dotted.slick-slider{
+    margin-bottom:0;
+}
+
+.slick-prev {
+    left: 25px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 25px;
+}
+.slick-prev:before, .slick-next:before{
+    color: #ffffff;
+    background: rgba(0,0,0,0.5);
+    padding:0.25em;
+}

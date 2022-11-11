@@ -1,0 +1,165 @@
+.cards{
+    background-image: linear-gradient(to top, #e9eef3, #eff2f6, #f5f6f9, #fafafc, #ffffff);
+    margin-top: -20px;
+    position: relative;
+    @media (min-width: $break-point-s) {
+        margin-top: 0;
+        padding-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom:2em;
+    }
+    .card{
+        background-color: $white;
+        margin: 1em 0.5em; 
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        @media (min-width: $break-point-s) {
+            width: 48%;
+        }
+        &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .title{
+            padding: 5px 13px;
+            font-weight:700;
+            font-size: large;
+        }
+        &-img{
+            border-radius: 5px 5px 0 0;
+        }
+        &-list{
+            &--text{
+                .item{
+                    border-bottom:2px solid $grey;
+                    padding: 10px 0 10px 13px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    .league{
+                        @include flex-center-row;
+                    }
+                    .ico{
+                        margin-right: 5px; 
+                    }
+                    .horse-number{
+                        display: flex;
+                        align-items: center;
+                        font-size: smaller;
+                        .number{
+                            min-width: 20px;
+                            text-align: center;
+                        }
+                        .ico:first-of-type{
+                            width:16px;
+                        }
+                    }
+                    &:hover{
+                        font-weight:700;
+                    }
+                }
+            }
+        }
+        .more{
+            color:$primary-blue;
+            display: flex;
+            justify-content: end;
+            padding:15px;
+            cursor: pointer;
+            &:hover{
+                font-weight:700;
+            }
+        }
+        &-banner{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            .card-img{
+                width:45vw;
+                border-radius:5px;
+                @media (min-width: $break-point-s) {
+                   width:70%;
+                }
+            }
+            &--text{
+                padding: 15px;
+                .title{
+                    padding: 5px 0 0 0;
+                    font-weight: 700;
+                    font-size:medium;
+                    font-weight: 700;
+                    color:$grey-blue;
+                    @media (min-width: $break-point-s) {
+                        font-size: x-large;
+                    }
+                }
+                .marked-text{
+                    color:$yellow-2; 
+                    font-weight: 700;
+                    font-size:xx-large;
+                    line-height:1;
+                    @media (min-width: $break-point-s) {
+                        font-size: xxx-large;
+                    }
+                }
+                @media (min-width: $break-point-s) {
+                    text-align: center;
+                }
+            }
+            @media (min-width: $break-point-s) {
+                flex-direction: column;
+                padding-bottom: 1em;
+            }
+        } 
+        &-small{
+            cursor: pointer;
+            .title{
+                display:flex;
+                align-items:center;
+                justify-content: space-between;
+            }
+        }
+        &-double{
+            box-shadow: none;
+            background-color: $grey-bg;
+            margin: 0;
+            @media (min-width: $break-point-s) {
+                margin: 1em 0.5em;
+            }
+            &:hover{
+                box-shadow: none;
+            }
+            .title{
+                display:flex;
+                align-items:center;
+                justify-content: space-between;
+            }
+            &-group{
+                @include flex-center-row;
+                @media (min-width: $break-point-s) {
+                    justify-content: space-between;
+                }
+                .card-img{
+                    object-fit: cover;
+                    height: 25vh;
+                    @media (min-width: $break-point-s) {
+                        height: 23vh;
+                    }
+                }
+                .card-half{
+                    margin-top: 0;
+                    cursor: pointer;
+                    @media (min-width: $break-point-s) {
+                        margin:0;
+                        width: 48.75%;
+                    }
+                }
+            }
+        }
+    }
+}
